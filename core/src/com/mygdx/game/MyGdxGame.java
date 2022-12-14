@@ -27,6 +27,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		img = new Texture("battleground.jpg");
 
+
 		warlockPic = new Texture("warlock.png");
 		sharpsooterPic = new Texture("warlock.png");
 		roguePic = new Texture("warlock.png");
