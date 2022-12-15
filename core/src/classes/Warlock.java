@@ -5,7 +5,7 @@ import utils.Party;
 
 public class Warlock extends BaseHero {
 
-    public Warlock(Party side, int x, int y, int amount) {
+    public Warlock(Party side, float x, float y, int amount) {
         super(17, 12, 30, 9, 5, 5, 1, "Warlock", "alive");
         super.side = side;
         super.coords = new CharsCoords(x, y);

@@ -3,9 +3,9 @@ package classes;
 import java.util.Objects;
 
 public class CharsCoords {
-    double x, y;
+    float x, y;
 
-    public CharsCoords(double x, double y) {
+    public CharsCoords(float x, float y) {
         this.x = x;
         this.y = y;
     }
@@ -23,9 +23,11 @@ public class CharsCoords {
         return Objects.hash(x, y);
     }
 
-
     public Double distance(CharsCoords char1){
         return Math.pow((Math.pow((x - char1.x), 2) + Math.pow((y - char1.y), 2)), 0.5);
     }
+
+    public float getY() {return y;}
+    public float getX() {return x;}
 }
 

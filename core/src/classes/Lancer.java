@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Lancer extends BaseHero {
 
-    public Lancer(Party side, int x, int y, int amount) {
+    public Lancer(Party side, float x, float y, int amount) {
         super(4, 5, 10, 4, 1, 3, 1,"Lancer", "alive");
         super.side = side;
         super.coords = new CharsCoords(x, y);

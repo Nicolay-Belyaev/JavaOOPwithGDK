@@ -6,6 +6,8 @@ import com.badlogic.gdx.Gdx;
 import java.util.ArrayList;
 
 public class Party extends ArrayList<BaseHero> {
+    private final float zeroCoordY = 400;
+    private final int shiftCoordY = 100;
     public Party() {}
 
     public Party(Party party1, Party party2) {
@@ -75,50 +77,50 @@ public class Party extends ArrayList<BaseHero> {
     //region методы для добавления персонажей в группу
     public void addPeasant(int peasants, int amount) {
         for (int i = 0; i < peasants; i++) {
-            int x = (this == Sides.darkside) ? 1 : 555;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Peasant(this, x, y, amount));
         }
     }
     public void addRogue(int rogues, int amount) {
         for (int i = 0; i < rogues; i++) {
-            int x = (this == Sides.darkside) ? 1 : 555;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Rogue(this, x, y, amount));
         }
     }
     public void addSharpshooter(int sharpshooters, int amount) {
         for (int i = 0; i < sharpshooters; i++) {
-            int x = (this == Sides.darkside)? 1 : 555;
-            int y = this.size();
+            float x = (this == Sides.darkside)? 1 : Gdx.graphics.getWidth() - 83;;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Sharpshooter(this, x, y, amount));
         }
     }
     public void addWarlock(int warlocks, int amount) {
         for (int i = 0; i < warlocks; i++) {
-            int x = (this == Sides.darkside) ? 1 : Gdx.graphics.getHeight() - 1;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Warlock(this, x, y, amount));
         }
     }
     public void addMonk(int monks, int amount) {
         for (int i = 0; i < monks; i++) {
-            int x = (this == Sides.darkside) ? 1 : Gdx.graphics.getHeight() - 1;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Monk(this, x, y, amount));
         }
     }
     public void addLancer(int lancer, int amount) {
         for (int i = 0; i < lancer; i++) {
-            int x = (this == Sides.darkside) ? 1 : Gdx.graphics.getHeight() - 1;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Lancer(this, x, y, amount));
         }
     }
     public void addCrossbownman(int crossbownmans, int amount) {
         for (int i = 0; i < crossbownmans; i++) {
-            int x = (this == Sides.darkside) ? 1 : Gdx.graphics.getHeight() - 1;
-            int y = this.size();
+            float x = (this == Sides.darkside) ? 1 : Gdx.graphics.getWidth() - 83;
+            float y = (this.size() == 0) ? zeroCoordY : (this.get(this.size() - 1).getCoords().getY() - shiftCoordY);
             this.add(new Xbowman(this, x, y, amount));
         }
     }

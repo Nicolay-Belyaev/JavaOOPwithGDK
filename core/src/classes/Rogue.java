@@ -6,7 +6,7 @@ import utils.Party;
 import java.util.ArrayList;
 
 public class Rogue extends BaseHero {
-    public Rogue(Party side, int x, int y, int amount) {
+    public Rogue(Party side, float x, float y, int amount) {
         super(8, 3, 10, 6, 2, 4, 1 ,"Rogue", "alive");
         super.side = side;
         super.coords = new CharsCoords(x, y);
